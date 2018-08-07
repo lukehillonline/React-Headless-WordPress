@@ -1,0 +1,580 @@
+body {
+  margin: 0; }
+
+.view-container {
+  padding-top: 64px; }
+
+.modal-container {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  z-index: 1200;
+  transition: top 500ms ease 0s, left 500ms ease 0s, right 500ms ease 0s, bottom 500ms ease 500ms, width 500ms ease 0s, height 500ms ease 500ms; }
+
+.modal-enter.modal-enter-active,
+.modal-container.modal-enter-done {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow-y: auto; }
+
+.modal-exit,
+.modal-exit.modal-exit-active {
+  transition: top 500ms ease 500ms, left 500ms ease 500ms, right 500ms ease 500ms, bottom 500ms ease 0s, width 500ms ease 500ms, height 500ms ease 0s; }
+
+.modal-container .back {
+  position: absolute;
+  background: white;
+  padding: 5px;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 100;
+  display: none; }
+
+.modal-container.modal-enter-done .back {
+  display: block; }
+
+.modal-container:empty {
+  display: none !important; }
+
+#movie_page {
+  height: 100%; }
+  #movie_page .masthead {
+    height: 100%;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden; }
+    #movie_page .masthead img {
+      position: absolute;
+      top: 0px;
+      bottom: 0px; }
+
+.main-navigation {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  overflow: hidden; }
+  .main-navigation .navigation-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    opacity: 0;
+    overflow: hidden;
+    display: none; }
+    .main-navigation .navigation-overlay.animation-exit-done {
+      display: none; }
+    .main-navigation .navigation-overlay.animation-enter-active, .main-navigation .navigation-overlay.animation-enter-done {
+      display: block;
+      -webkit-animation-name: reveal;
+      -moz-animation-name: reveal;
+      animation-name: reveal; }
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0; }
+  0.1%, 100% {
+    opacity: 1; } }
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0; }
+  0.1%, 100% {
+    opacity: 1; } }
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0; }
+  0.1%, 100% {
+    opacity: 1; } }
+
+@keyframes reveal {
+  0% {
+    opacity: 0; }
+  0.1%, 100% {
+    opacity: 1; } }
+      .main-navigation .navigation-overlay.animation-enter-active .background-fill.first, .main-navigation .navigation-overlay.animation-enter-done .background-fill.first {
+        -webkit-animation-name: backgroundFillFirst;
+        -moz-animation-name: backgroundFillFirst;
+        animation-name: backgroundFillFirst; }
+
+@-webkit-keyframes backgroundFillFirst {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  16%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes backgroundFillFirst {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  16%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-o-keyframes backgroundFillFirst {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  16%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes backgroundFillFirst {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  16%, 100% {
+    transform: translate3d(0, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-enter-active .background-fill.second, .main-navigation .navigation-overlay.animation-enter-done .background-fill.second {
+        -webkit-animation-name: backgroundFillSecond;
+        -moz-animation-name: backgroundFillSecond;
+        animation-name: backgroundFillSecond; }
+
+@-webkit-keyframes backgroundFillSecond {
+  0%, 4% {
+    transform: translate3d(-100%, 0, 0); }
+  20%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes backgroundFillSecond {
+  0%, 4% {
+    transform: translate3d(-100%, 0, 0); }
+  20%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-o-keyframes backgroundFillSecond {
+  0%, 4% {
+    transform: translate3d(-100%, 0, 0); }
+  20%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes backgroundFillSecond {
+  0%, 4% {
+    transform: translate3d(-100%, 0, 0); }
+  20%, 100% {
+    transform: translate3d(0, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-enter-active .background-fill.third, .main-navigation .navigation-overlay.animation-enter-done .background-fill.third {
+        -webkit-animation-name: backgroundFillThird;
+        -moz-animation-name: backgroundFillThird;
+        animation-name: backgroundFillThird; }
+
+@-webkit-keyframes backgroundFillThird {
+  0%, 8% {
+    transform: translate3d(-100%, 0, 0); }
+  24%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes backgroundFillThird {
+  0%, 8% {
+    transform: translate3d(-100%, 0, 0); }
+  24%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-o-keyframes backgroundFillThird {
+  0%, 8% {
+    transform: translate3d(-100%, 0, 0); }
+  24%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes backgroundFillThird {
+  0%, 8% {
+    transform: translate3d(-100%, 0, 0); }
+  24%, 100% {
+    transform: translate3d(0, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-enter-active .background-fill.fourth, .main-navigation .navigation-overlay.animation-enter-done .background-fill.fourth {
+        -webkit-animation-name: backgroundFillFourth;
+        -moz-animation-name: backgroundFillFourth;
+        animation-name: backgroundFillFourth; }
+
+@-webkit-keyframes backgroundFillFourth {
+  0%, 12% {
+    transform: translate3d(-100%, 0, 0); }
+  28%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes backgroundFillFourth {
+  0%, 12% {
+    transform: translate3d(-100%, 0, 0); }
+  28%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-o-keyframes backgroundFillFourth {
+  0%, 12% {
+    transform: translate3d(-100%, 0, 0); }
+  28%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes backgroundFillFourth {
+  0%, 12% {
+    transform: translate3d(-100%, 0, 0); }
+  28%, 100% {
+    transform: translate3d(0, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-enter-active .background-fill.fifth, .main-navigation .navigation-overlay.animation-enter-done .background-fill.fifth {
+        -webkit-animation-name: backgroundFillFifth;
+        -moz-animation-name: backgroundFillFifth;
+        animation-name: backgroundFillFifth; }
+
+@-webkit-keyframes backgroundFillFifth {
+  0%, 16% {
+    transform: translate3d(-100%, 0, 0); }
+  32%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes backgroundFillFifth {
+  0%, 16% {
+    transform: translate3d(-100%, 0, 0); }
+  32%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-o-keyframes backgroundFillFifth {
+  0%, 16% {
+    transform: translate3d(-100%, 0, 0); }
+  32%, 100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes backgroundFillFifth {
+  0%, 16% {
+    transform: translate3d(-100%, 0, 0); }
+  32%, 100% {
+    transform: translate3d(0, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-enter-active ul,
+      .main-navigation .navigation-overlay.animation-enter-active .close-button, .main-navigation .navigation-overlay.animation-enter-done ul,
+      .main-navigation .navigation-overlay.animation-enter-done .close-button {
+        -webkit-animation-name: showNavigation;
+        -moz-animation-name: showNavigation;
+        animation-name: showNavigation; }
+
+@-webkit-keyframes showNavigation {
+  0%, 40% {
+    opacity: 0; }
+  56%, 100% {
+    opacity: 1; } }
+
+@-moz-keyframes showNavigation {
+  0%, 40% {
+    opacity: 0; }
+  56%, 100% {
+    opacity: 1; } }
+
+@-o-keyframes showNavigation {
+  0%, 40% {
+    opacity: 0; }
+  56%, 100% {
+    opacity: 1; } }
+
+@keyframes showNavigation {
+  0%, 40% {
+    opacity: 0; }
+  56%, 100% {
+    opacity: 1; } }
+    .main-navigation .navigation-overlay.animation-exit-active {
+      display: block;
+      -webkit-animation-name: hide;
+      -moz-animation-name: hide;
+      animation-name: hide; }
+
+@-webkit-keyframes hide {
+  0%, 99.9% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes hide {
+  0%, 99.9% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes hide {
+  0%, 99.9% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes hide {
+  0%, 99.9% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+      .main-navigation .navigation-overlay.animation-exit-active .background-fill.first {
+        -webkit-animation-name: backgroundExitlFirst;
+        -moz-animation-name: backgroundExitlFirst;
+        animation-name: backgroundExitlFirst; }
+
+@-webkit-keyframes backgroundExitlFirst {
+  0%, 24% {
+    transform: translate3d(0, 0, 0); }
+  40%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-moz-keyframes backgroundExitlFirst {
+  0%, 24% {
+    transform: translate3d(0, 0, 0); }
+  40%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-o-keyframes backgroundExitlFirst {
+  0%, 24% {
+    transform: translate3d(0, 0, 0); }
+  40%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes backgroundExitlFirst {
+  0%, 24% {
+    transform: translate3d(0, 0, 0); }
+  40%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-exit-active .background-fill.second {
+        -webkit-animation-name: backgroundExitlSecond;
+        -moz-animation-name: backgroundExitlSecond;
+        animation-name: backgroundExitlSecond; }
+
+@-webkit-keyframes backgroundExitlSecond {
+  0%, 28% {
+    transform: translate3d(0, 0, 0); }
+  44%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-moz-keyframes backgroundExitlSecond {
+  0%, 28% {
+    transform: translate3d(0, 0, 0); }
+  44%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-o-keyframes backgroundExitlSecond {
+  0%, 28% {
+    transform: translate3d(0, 0, 0); }
+  44%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes backgroundExitlSecond {
+  0%, 28% {
+    transform: translate3d(0, 0, 0); }
+  44%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-exit-active .background-fill.third {
+        -webkit-animation-name: backgroundExitlThird;
+        -moz-animation-name: backgroundExitlThird;
+        animation-name: backgroundExitlThird; }
+
+@-webkit-keyframes backgroundExitlThird {
+  0%, 32% {
+    transform: translate3d(0, 0, 0); }
+  48%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-moz-keyframes backgroundExitlThird {
+  0%, 32% {
+    transform: translate3d(0, 0, 0); }
+  48%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-o-keyframes backgroundExitlThird {
+  0%, 32% {
+    transform: translate3d(0, 0, 0); }
+  48%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes backgroundExitlThird {
+  0%, 32% {
+    transform: translate3d(0, 0, 0); }
+  48%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-exit-active .background-fill.fourth {
+        -webkit-animation-name: backgroundExitlFourth;
+        -moz-animation-name: backgroundExitlFourth;
+        animation-name: backgroundExitlFourth; }
+
+@-webkit-keyframes backgroundExitlFourth {
+  0%, 36% {
+    transform: translate3d(0, 0, 0); }
+  52%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-moz-keyframes backgroundExitlFourth {
+  0%, 36% {
+    transform: translate3d(0, 0, 0); }
+  52%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-o-keyframes backgroundExitlFourth {
+  0%, 36% {
+    transform: translate3d(0, 0, 0); }
+  52%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes backgroundExitlFourth {
+  0%, 36% {
+    transform: translate3d(0, 0, 0); }
+  52%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-exit-active .background-fill.fifth {
+        -webkit-animation-name: backgroundExitlFifth;
+        -moz-animation-name: backgroundExitlFifth;
+        animation-name: backgroundExitlFifth; }
+
+@-webkit-keyframes backgroundExitlFifth {
+  0%, 40% {
+    transform: translate3d(0, 0, 0); }
+  56%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-moz-keyframes backgroundExitlFifth {
+  0%, 40% {
+    transform: translate3d(0, 0, 0); }
+  56%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@-o-keyframes backgroundExitlFifth {
+  0%, 40% {
+    transform: translate3d(0, 0, 0); }
+  56%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes backgroundExitlFifth {
+  0%, 40% {
+    transform: translate3d(0, 0, 0); }
+  56%, 100% {
+    transform: translate3d(100%, 0, 0); } }
+      .main-navigation .navigation-overlay.animation-exit-active ul,
+      .main-navigation .navigation-overlay.animation-exit-active .close-button {
+        -webkit-animation-name: hideNavigation;
+        -moz-animation-name: hideNavigation;
+        animation-name: hideNavigation; }
+
+@-webkit-keyframes hideNavigation {
+  0% {
+    opacity: 1; }
+  16%, 100% {
+    opacity: 0; } }
+
+@-moz-keyframes hideNavigation {
+  0% {
+    opacity: 1; }
+  16%, 100% {
+    opacity: 0; } }
+
+@-o-keyframes hideNavigation {
+  0% {
+    opacity: 1; }
+  16%, 100% {
+    opacity: 0; } }
+
+@keyframes hideNavigation {
+  0% {
+    opacity: 1; }
+  16%, 100% {
+    opacity: 0; } }
+  .main-navigation ul {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    Left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    z-index: 2; }
+  .main-navigation .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    padding: 10px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer; }
+  .main-navigation .background-fill {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 20%;
+    background-color: yellow;
+    z-index: 1;
+    transform: translate3d(-100%, 0, 0); }
+    .main-navigation .background-fill.first {
+      top: 0px; }
+    .main-navigation .background-fill.second {
+      top: 20%; }
+    .main-navigation .background-fill.third {
+      top: 40%; }
+    .main-navigation .background-fill.fourth {
+      top: 60%; }
+    .main-navigation .background-fill.fifth {
+      top: 80%; }
+
+.main-navigation--menu-icon {
+  padding: 10px;
+  background: blue;
+  cursor: pointer; }
+
+.navigation-overlay,
+ul,
+.close-button,
+.background-fill {
+  -webkit-animation-duration: 6s;
+  -moz-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.movie-tout {
+  width: 25%;
+  padding-top: 25%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background: #000000; }
+  .movie-tout:eq(0) {
+    width: 50%; }
+
+.movie-tout:hover {
+  cursor: pointer; }
+
+.movie-tout:hover img {
+  opacity: 1; }
+
+.movie-tout img {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100vw;
+  opacity: 0.5; }
+
+.movie-tout h2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  margin: 0px;
+  padding: 20px; }
+
+.movie-tout h2 span {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px; }

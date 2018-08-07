@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+
+.view-container{
+    padding-top: 64px;
+}
+
+.modal-container {
+    position:fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 1200;
+    
+    transition: top 500ms ease 0s,
+                left 500ms ease 0s,
+                right 500ms ease 0s,
+                bottom 500ms ease 500ms,
+                width 500ms ease 0s,
+                height 500ms ease 500ms;
+}
+
+
+.modal-enter.modal-enter-active,
+.modal-container.modal-enter-done { 
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow-y: auto;
+}
+
+
+.modal-exit,
+.modal-exit.modal-exit-active {
+    transition: top 500ms ease 500ms,
+                left 500ms ease 500ms,
+                right 500ms ease 500ms,
+                bottom 500ms ease 0s,
+                width 500ms ease 500ms,
+                height 500ms ease 0s;
+}
+
+.modal-container .back {
+    position: absolute;
+    background: white;
+    padding: 5px;
+    font-weight: bold;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.modal-container.modal-enter-done {
+    .back {
+        display: block;
+    }
+}
+
+.modal-container:empty{
+    display:none !important;
+}

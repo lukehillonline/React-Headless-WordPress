@@ -1,0 +1,49 @@
+.movie-tout {
+	width: 25%;
+	padding-top: 25%;
+	display: inline-block;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	background: #000000;
+
+	&:eq(0) {
+		width: 50%;
+	}
+}
+
+.movie-tout:hover {
+	cursor: pointer;
+}
+
+.movie-tout:hover img {
+	opacity: 1;
+}
+
+.movie-tout img {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100vw;
+	opacity: 0.5;
+
+}
+
+.movie-tout h2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(0, 0, 0, 0.4);
+	color: white;
+	margin: 0px;
+	padding: 20px;
+}
+
+.movie-tout h2 span {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+}
